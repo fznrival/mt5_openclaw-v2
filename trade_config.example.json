@@ -1,0 +1,63 @@
+{
+  "telegram_bot_token": "YOUR_BOT_TOKEN_HERE",
+  "telegram_chat_id":   "YOUR_CHAT_ID_HERE",
+  "anthropic_api_key":  "YOUR_ANTHROPIC_API_KEY_HERE",
+  "csv_path":           "/home/fznrival/mt5_data/trade_log.csv",
+  "account_balance":    1000.0,
+  "currency":           "USD",
+  "risk_per_trade_pct": 1.0,
+  "timezone_label":     "WIB",
+
+  "trading": {
+    "symbols":            ["USTECm", "XAUUSD", "GBPUSD"],
+    "timeframe":          15,
+    "lot_size":           0.01,
+    "risk_reward_ratio":  2.0,
+    "magic_number":       2022001,
+    "slippage_dev":       20,
+    "max_trades_per_day": 2,
+    "demo_mode":          true,
+
+    "ict": {
+      "ote_fib_low":          0.62,
+      "ote_fib_high":         0.79,
+      "fvg_min_pips":         5.0,
+      "swing_lookback":       20,
+      "sl_buffer_pips":       5.0,
+      "liquidity_lookback":   10,
+      "displacement_body_pct": 0.7
+    },
+
+    "macro_times_eastern": [
+      { "time": "08:30", "label": "NFP/CPI/PPI" },
+      { "time": "10:00", "label": "ISM/Consumer Confidence" },
+      { "time": "14:00", "label": "FOMC Minutes" },
+      { "time": "14:30", "label": "Fed Chair Speech" },
+      { "time": "15:30", "label": "PM Macro Window" }
+    ],
+    "macro_window_minutes": 60,
+
+    "silver_bullet_windows_eastern": [
+      { "start": "03:00", "end": "04:00",  "label": "London SB Window" },
+      { "start": "10:00", "end": "11:00",  "label": "AM SB Window" },
+      { "start": "14:00", "end": "15:00",  "label": "PM SB Window" }
+    ],
+
+    "killzone_wib": {
+      "asia_start":   "08:00",
+      "asia_end":     "11:00",
+      "london_start": "15:00",
+      "london_end":   "18:00",
+      "ny_start":     "20:00",
+      "ny_end":       "23:00"
+    }
+  },
+
+  "openclaw_ai": {
+    "enabled":          true,
+    "model":            "claude-sonnet-4-20250514",
+    "max_tokens":       1024,
+    "confidence_threshold": 0.75,
+    "require_ai_approval":  true
+  }
+}

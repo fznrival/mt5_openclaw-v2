@@ -1,0 +1,24 @@
+{
+  "name": "ict-silver-bullet",
+  "version": "2.0.0",
+  "description": "Full ICT 2022 Silver Bullet scanner: Macro Time + Silver Bullet windows + Liquidity Sweep + FVG + OTE. OpenClaw AI (Anthropic) sebagai pengambil keputusan.",
+  "triggers": [
+    "scan market", "cek sinyal", "ict scan", "jalankan scanner",
+    "cari setup", "ada setup?", "check signal", "scan sekarang",
+    "cek macro", "silver bullet scan", "jalankan ict"
+  ],
+  "actions": [
+    {
+      "id": "scan_now",
+      "command": "WINEPREFIX=~/.wine_mt5 wine python ~/mt5_openclaw/python/mt5_ict_executor.py",
+      "description": "Scan Silver Bullet + Macro Time, minta keputusan AI, eksekusi jika approve"
+    }
+  ],
+  "schedule": [
+    {
+      "cron": "*/15 * * * *",
+      "action": "scan_now",
+      "description": "Auto scan setiap 15 menit (M15 timeframe)"
+    }
+  ]
+}
