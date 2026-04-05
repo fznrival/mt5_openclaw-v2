@@ -48,13 +48,13 @@ mt5_openclaw/
 
 ```bash
 # 1. Install Wine + MT5
-bash ~/mt5_openclaw/setup_mt5_wine.sh
+bash ~/mt5_openclaw-v2/setup_mt5_wine.sh
 
 # 2. Install dependencies
-bash ~/mt5_openclaw/install_deps.sh
+bash ~/mt5_openclaw-v2/install_deps.sh
 
 # 3. Buat config
-cp ~/mt5_openclaw/trade_config.example.json ~/.openclaw/trade_config.json
+cp ~/mt5_openclaw-v2/trade_config.example.json ~/.openclaw/trade_config.json
 nano ~/.openclaw/trade_config.json
 # Isi: telegram_bot_token, telegram_chat_id, anthropic_api_key
 
@@ -63,7 +63,7 @@ cd ~/mt5_openclaw/python
 WINEPREFIX=~/.wine_mt5 wine python mt5_ict_executor.py
 
 # 5. Setup jadwal otomatis
-bash ~/mt5_openclaw/setup_cron.sh
+bash ~/mt5_openclaw-v2/setup_cron.sh
 ```
 
 ---
